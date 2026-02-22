@@ -14,6 +14,8 @@
 
 1. Download [iTerm 2](https://iterm2.com/)
 2. Add [com.googlecode.iterm2.plist](https://github.com/sxnaprkhr/dotfiles/blob/main/iterm2/com.googlecode.iterm2.plist) to `~/Library/Preferences`
+   - This is iTerm2's preferences file containing all terminal customization settings (colors, fonts, keybindings, etc.)
+   - See [iterm2/README.md](iterm2/README.md) for more details
 
 ### Steps for zsh
 
