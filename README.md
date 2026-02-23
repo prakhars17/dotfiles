@@ -13,7 +13,7 @@ This repository contains my dotfiles [MacOS].
     ```
 2. Install required packages -
     ```sh
-    brew install starship zsh-autosuggestions zvsh-syntax-highlighting zoxide fzf bat eza
+    brew install starship zsh-autosuggestions zsh-syntax-highlighting zoxide fzf bat eza
     ```
 3. Enable keybindings -
     ```sh
