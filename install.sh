@@ -9,14 +9,17 @@ if ! command -v brew &> /dev/null; then
     exit 1
 fi
 
+echo "Installing Ghostty..."
+brew install --cask ghostty
+
 echo "Installing packages..."
 brew install starship zsh-autosuggestions zsh-syntax-highlighting zoxide fzf bat eza
 
-echo "Installing fonts..."
-brew install --cask font-jetbrains-mono-nerd-font
-
 echo "Setting up fzf keybindings..."
 yes | $(brew --prefix)/opt/fzf/install --key-bindings --completion --no-bash
+
+echo "Installing fonts..."
+brew install --cask font-jetbrains-mono-nerd-font
 
 echo "Copying dotfiles to home directory..."
 cp .gitconfig ~/.gitconfig

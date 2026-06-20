@@ -6,26 +6,41 @@ This repository contains my dotfiles [MacOS].
 
 ## Installation
 
+**Automated:** Run the install script:
+```sh
+./install.sh
+```
+
+**Or Manual Steps:**
+
 0. Requires zsh to be default.
-1. Download [Ghostty](https://ghostty.org/) -
+1. Check Homebrew is installed -
+    ```sh
+    command -v brew
+    ```
+2. Download [Ghostty](https://ghostty.org/) -
     ```sh
     brew install --cask ghostty
     ```
-2. Install required packages -
+3. Install required packages -
     ```sh
     brew install starship zsh-autosuggestions zsh-syntax-highlighting zoxide fzf bat eza
     ```
-3. Enable keybindings -
+4. Enable keybindings (auto-answer) -
     ```sh
-    $(brew --prefix)/opt/fzf/install #(keybindings - y, completions - y, auto-shell config - n)
+    yes | $(brew --prefix)/opt/fzf/install --key-bindings --completion --no-bash
     ```
-4. Install JetBrains Nerd Font
+5. Install JetBrains Nerd Font
     ```sh
     brew install --cask font-jetbrains-mono-nerd-font
     ```
-5. Add files to `~` -
+6. Add files to `~` -
     ```sh
     cp .gitconfig ~/
     cp -r .config ~/
     cp .zshrc ~/
+    ```
+7. Reload shell configuration -
+    ```sh
+    exec zsh
     ```
