@@ -22,7 +22,7 @@ setopt HIST_IGNORE_SPACE
 # Completion
 # -----------------------------
 autoload -Uz compinit
-compinit
+compinit -C
 
 # -----------------------------
 # Keybindings
@@ -48,7 +48,7 @@ alias ga='git add .'
 alias gc='git commit -m'
 alias gp='git push'
 alias gl='git log --oneline --graph --decorate'
-
+alias calude='claude'
 
 # -----------------------------
 # Autosuggestions config
@@ -57,9 +57,16 @@ ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 ZSH_AUTOSUGGEST_USE_ASYNC=true
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#6c7086'
 
+# -----------------------------
+# User local binaries
+# -----------------------------
+export PATH="$HOME/.local/bin:$PATH"
+
+# Apple Silicon path
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # -----------------------------
 # Syntax Highlighting (MUST BE LAST)
+# Apple Silicon path
 # -----------------------------
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
