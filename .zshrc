@@ -45,7 +45,7 @@ alias ll='eza -la --icons'
 alias cat='bat'
 alias gs='git status'
 alias ga='git add .'
-alias gc='git commit'
+alias gc='git commit -m'
 alias gp='git push'
 alias gl='git log --oneline --graph --decorate'
 
